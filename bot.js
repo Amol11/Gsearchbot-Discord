@@ -1,7 +1,7 @@
 const botconfig = require("./config.json");
 const discord = require("discord.js");
-const {search} = require("./search.js");
-const {recent} = require("./recent.js");
+const {search} = require("./functions/search.js");
+const {recent} = require("./functions/recent.js");
 
 const bot = new discord.Client({disableEveryone: true});
 

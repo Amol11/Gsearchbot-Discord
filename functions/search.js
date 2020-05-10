@@ -22,7 +22,7 @@ var search = async (prefix, message) => {
                 console.log(results);
                     
                 message.channel.send("Showing top 5 results-");
-                for(var i=0; i<5; i++){
+                for(var i=0; i<1; i++){
                     message.channel.send(results[i].title)
                     message.channel.send(results[i].link);
                 }

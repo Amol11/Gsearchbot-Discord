@@ -1,6 +1,9 @@
 const fs = require("fs");
+const path = require("path");
 
 var recent = async (prefix, message) => {
+
+    var filePath = path.join(__dirname, './../logs/history.json');
     message.channel.send("What do you want to search in recents?\n(type \"!abort\" to abort the search.)");
     let filter = m => m.author.id === message.author.id;
     let collected = await message.channel.awaitMessages(filter, {max: 1});
@@ -14,7 +17,7 @@ var recent = async (prefix, message) => {
 
     else{
         var recents = [];
-        let data = fs.readFileSync('history.json', 'utf8');
+        let data = fs.readFileSync(filePath, 'utf8');
         console.log(data);
         jsonData = JSON.parse(data);
 
@@ -33,6 +36,9 @@ var recent = async (prefix, message) => {
             message.channel.send('Here\'s what I found-');
             for(var j=0; j<recents.length; j++){
                 message.channel.send(`-${recents[j]}`);
+                if(j === recents.length - 1){
+                    message.channel.send('End of list.');
+                }
             }
         }
     }

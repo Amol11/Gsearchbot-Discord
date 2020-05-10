@@ -1,6 +1,9 @@
 const fs = require("fs");
+const path = require("path");
 
 var saveJson = (queryingUser, query) => {
+
+    var filePath = path.join(__dirname, './../logs/history.json');
     var logArray = [];
     var logArrayString;
     var createdAt = new Date().getTime();
@@ -11,7 +14,7 @@ var saveJson = (queryingUser, query) => {
         createdAt,
     };
 
-    fs.readFile('history.json', 'utf8', (err, jsonString) => {
+    fs.readFile(filePath, 'utf8', (err, jsonString) => {
         if(err){
             console.log('cannot read file');
             return;
@@ -22,7 +25,7 @@ var saveJson = (queryingUser, query) => {
             logArray.push(currentLog);
             logArrayString = JSON.stringify(logArray);
             console.log(logArrayString);
-            fs.writeFile('history.json', logArrayString, err => {
+            fs.writeFile(filePath, logArrayString, err => {
                 if(err){
                     console.log('Unable to write to file');
                 }
@@ -41,7 +44,7 @@ var saveJson = (queryingUser, query) => {
             logArrayString = JSON.stringify(logArray);
             console.log(logArrayString);
 
-            fs.writeFile('history.json', logArrayString, err => {
+            fs.writeFile(filePath, logArrayString, err => {
             if(err){
                 console.log('Unable to write to file.');
             }
