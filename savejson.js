@@ -19,9 +19,10 @@ var saveJson = (queryingUser, query) => {
 
         // console.log("jsonstring var: ", jsonString);
         if(jsonString === ''){
-            var currentLogString = JSON.stringify(currentLog);
-            console.log(currentLogString);
-            fs.writeFile('history.json', currentLogString, err => {
+            logArray.push(currentLog);
+            logArrayString = JSON.stringify(logArray);
+            console.log(logArrayString);
+            fs.writeFile('history.json', logArrayString, err => {
                 if(err){
                     console.log('Unable to write to file');
                 }
@@ -34,7 +35,7 @@ var saveJson = (queryingUser, query) => {
 
         else{
             var json = JSON.parse(jsonString);
-            logArray.push(json);
+            logArray = json;
             logArray.push(currentLog);
             // console.log('File data', logArray);
             logArrayString = JSON.stringify(logArray);
