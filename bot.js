@@ -8,7 +8,7 @@ const bot = new discord.Client({disableEveryone: true});
 
 bot.on("ready", async () => {
     console.log(`${bot.user.username} bot is online`);
-    bot.user.setActivity("GSearch", {type: "LISTENING"});
+    bot.user.setActivity("!help", {type: "LISTENING"});
 });
 
 bot.on("message", async message => {
@@ -18,15 +18,20 @@ bot.on("message", async message => {
         let prefix = botconfig.prefix;
         let messageArray = message.content.split(" ");
         let cmd = messageArray[0];
-
+        var queryingUser = message.author.username;
         switch(cmd){
-            case `${prefix}hey`: return message.channel.send(`Hi ${message.author.username}!`);
+            case `${prefix}hey`: return message.channel.send(`Hi ${queryingUser}!`);
                     break;
 
             case `${prefix}search`: search(prefix, message);
                     break;
 
             case `${prefix}recent`: recent(prefix, message);
+                    break;
+
+            case `${prefix}help`: 
+            message.channel.send(`Hello ${queryingUser}! I can fetch top 5 google results for your query and save your search history.`); 
+            message.channel.send(`You can give me commands by typing-\n-"!hey"\n-"!search" to search.\n-"!recent" to view your search logs.`);
                     break;
         }
 
