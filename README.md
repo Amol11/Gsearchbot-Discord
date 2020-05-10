@@ -12,7 +12,7 @@ To test/run this program one must have:-
 How to Setup:
 1.Extract the package.
 2.open Node.js terminal. Navigate to the extracted package's directory in Node.js terminal.
-3.type command "npm i" and wait for packages to get installed.
+3.type command "npm init" and go through the details. Then type command "npm i" and wait for packages to get installed.
 4.type command "node bot.js"
 5.Wait for the message to show up "Gsearch bot is online"
 6.Launch discord. Add the bot to your server. Provide it a role.
