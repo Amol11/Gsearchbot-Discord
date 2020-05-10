@@ -5,17 +5,17 @@ This bot can be used to make a google search by passing a query string in the ch
 
 Prerequisites:
 To test/run this program one must have:-
--Node.js
--Discord
--A discord developer token which can be received
+1.Node.js
+2.Discord
+3.A discord developer token which can be obtained by logging on discord-developer-portal.
 
 How to Setup:
--Extract the package.
--open Node.js terminal. Navigate to the extracted package's directory in Node.js terminal.
--type command "npm i" and wait for packages to get installed.
--type command "node bot.js"
--Wait for the message to show up "Gsearch bot is online"
--Launch discord. Add the bot to your server. Provide it a role.
+1.Extract the package.
+2.open Node.js terminal. Navigate to the extracted package's directory in Node.js terminal.
+3.type command "npm i" and wait for packages to get installed.
+4.type command "node bot.js"
+5.Wait for the message to show up "Gsearch bot is online"
+6.Launch discord. Add the bot to your server. Provide it a role.
 
 How to use:
--you can type "!help" to see the functionalities of the bot.
+user can type "!help" to see the functionalities of the bot.
