@@ -1,8 +1,7 @@
 const botconfig = require("./config.json");
 const discord = require("discord.js");
-const googleIt = require("google-it");
-var {saveJson} = require("./savejson.js")
-
+const {search} = require("./search.js");
+const {recent} = require("./recent.js");
 
 const bot = new discord.Client({disableEveryone: true});
 
@@ -19,41 +18,18 @@ bot.on("message", async message => {
         let prefix = botconfig.prefix;
         let messageArray = message.content.split(" ");
         let cmd = messageArray[0];
-        let args = messageArray.slice[0];
 
-        if(cmd === `${prefix}hey`){
-            return message.channel.send("Hi");
+        switch(cmd){
+            case `${prefix}hey`: return message.channel.send(`Hi ${message.author.username}!`);
+                    break;
+
+            case `${prefix}search`: search(prefix, message);
+                    break;
+
+            case `${prefix}recent`: recent(prefix, message);
+                    break;
         }
-        else if(cmd === `${prefix}Gsearch`){
-            message.channel.send("What do you want to search?\n(type \"!abort\" to abort the search.)");
-            let filter = m => m.author.id === message.author.id;
-            let collected = await message.channel.awaitMessages(filter, {max: 1});
-            var query = collected.first().content;
-            console.log(query);
 
-
-            if(collected.first().content === `${prefix}abort`){
-                return message.channel.send("Seach aborted.");
-            }
-
-            else{
-                var queryingUser = message.author.username;
-                saveJson(queryingUser, query)
-
-                message.channel.send("Please wait...");
-                googleIt({'query': `${query}`}).then((results) => {
-                    console.log(results);
-                    
-                    message.channel.send("Showing top 5 results-");
-                    for(var i=0; i<1; i++){
-                        message.channel.send(results[i].title)
-                        message.channel.send(results[i].link);
-                    }
-                }).catch((err) => {
-                    message.channel.send("An error has occurred.");
-                })
-            }
-        }
 });
 
 bot.login(botconfig.TOKEN);
