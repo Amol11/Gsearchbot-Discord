@@ -15,7 +15,7 @@ bot.on("message", async message => {
     if(message.author.bot || message.channel.type === "dm")
         return;
     
-        let prefix = botconfig.prefix;
+        let prefix = process.env.prefix || botconfig.prefix;
         let messageArray = message.content.split(" ");
         let cmd = messageArray[0];
         var queryingUser = message.author.username;
@@ -37,4 +37,4 @@ bot.on("message", async message => {
 
 });
 
-bot.login(botconfig.TOKEN);
+bot.login(botconfig.TOKEN || process.env.TOKEN);
