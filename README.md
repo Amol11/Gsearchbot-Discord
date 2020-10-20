@@ -20,4 +20,4 @@ How to Setup:
 How to use:
 user can type "!help" to see the functionalities of the bot.
 
-https://user-images.githubusercontent.com/33172323/96592089-a2154800-1305-11eb-96ef-e44fbb820794.png
+![image](https://user-images.githubusercontent.com/33172323/96592357-eef91e80-1305-11eb-821e-fe02a522e906.png)
