@@ -19,3 +19,9 @@ How to Setup:
 
 How to use:
 user can type "!help" to see the functionalities of the bot.
+
+![image](https://user-images.githubusercontent.com/33172323/96592357-eef91e80-1305-11eb-821e-fe02a522e906.png)
+
+![image](https://user-images.githubusercontent.com/33172323/96592521-1c45cc80-1306-11eb-9de9-2527889d56c4.png)
+
+![image](https://user-images.githubusercontent.com/33172323/96592705-4e572e80-1306-11eb-932c-4a3a1d2651af.png)
