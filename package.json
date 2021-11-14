@@ -11,6 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.5.1",
-    "google-it": "^1.6.1"
+    "google-it": "^1.6.2"
   }
 }
