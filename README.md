@@ -20,12 +20,13 @@ How to Setup:
 How to use:
 user can type "!help" to see the functionalities of the bot.
 
-![image](https://user-images.githubusercontent.com/33172323/141681447-a0243d1a-1544-4fe4-9bee-579ff61b7195.png)
 
 ![image](https://user-images.githubusercontent.com/33172323/141681483-1043e2bd-bb57-4f81-8a02-b23e4fe4c5f9.png)
 
+![image](https://user-images.githubusercontent.com/33172323/141681447-a0243d1a-1544-4fe4-9bee-579ff61b7195.png)
+
 ![image](https://user-images.githubusercontent.com/33172323/141681500-b26d0663-a9ef-4497-b34e-15593f1a9849.png)
 
-![image](https://user-images.githubusercontent.com/33172323/141681518-a700e29d-0abf-42c5-939e-3284770863f5.png)
+![image](https://user-images.githubusercontent.com/33172323/141682437-96cec74d-7afa-46ec-adf5-ec4c41a71895.png)
 
 ![image](https://user-images.githubusercontent.com/33172323/141681532-8dc52b4e-0748-4f6b-bc31-e3b5b4fca083.png)
