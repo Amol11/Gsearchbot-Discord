@@ -16,12 +16,12 @@ bot.on("message", async message => {
         return;
     
         let prefix = process.env.prefix;
-        let greetings = ['Gsearch bot at your service', 'Gsearch bot is here to the rescue', 'you ought to use this bot', 'I\'m definitely an official bot *winks*', 'kept you waiting, huh?', 'I\'m always on holidays on last 10 days of every month', 'What\'s cooking good loonking?', 'What da dog doing?'];
+        let greetings = ['Gsearch bot at your service!', 'Gsearch bot is here to the rescue!', 'you ought to use this bot! *smug face*', 'kept you waiting, huh?', 'I\'m always on holidays on last 10 days of every month!', 'what\'s cooking, good looking?', 'what da dog doing?', 'did I ever tell you the definition of insanity?'];
         let messageArray = message.content.split(" ");
         let cmd = messageArray[0];
         var queryingUser = message.author.username;
         switch(cmd){
-            case `${prefix}hey`: return message.channel.send(`Hi ${queryingUser}, ${greetings[Math.floor(Math.random()*greetings.length)]}!`);
+            case `${prefix}hey`: return message.channel.send(`Hey ${queryingUser}, ${greetings[Math.floor(Math.random()*greetings.length)]}`);
                     break;
 
             case `${prefix}search`: search(prefix, message);
